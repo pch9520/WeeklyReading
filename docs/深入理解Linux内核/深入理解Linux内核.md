@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [深入理解Linux内核](#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3linux%E5%86%85%E6%A0%B8)
+  - [3 进程](#3-%E8%BF%9B%E7%A8%8B)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 深入理解Linux内核
 
 ## 3 进程

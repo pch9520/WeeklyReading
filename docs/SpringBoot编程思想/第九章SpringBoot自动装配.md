@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [九、Spring Boot自动装配](#%E4%B9%9Dspring-boot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D)
+  - [Spring Boot自动装配原理](#spring-boot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86)
+    - [步骤：](#%E6%AD%A5%E9%AA%A4)
+    - [@EnableAutoConfiguration排序自动装配组件](#enableautoconfiguration%E6%8E%92%E5%BA%8F%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%BB%84%E4%BB%B6)
+    - [Spring Boot条件化自动装配](#spring-boot%E6%9D%A1%E4%BB%B6%E5%8C%96%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D)
+    - [属性条件注解](#%E5%B1%9E%E6%80%A7%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3)
+    - [Resource条件注解](#resource%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3)
+    - [Spring表达式条件注解](#spring%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 九、Spring Boot自动装配
 ## Spring Boot自动装配原理
 ### 步骤：

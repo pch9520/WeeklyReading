@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [十二、Java内存模型与线程](#%E5%8D%81%E4%BA%8Cjava%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B)
+  - [12.1 Java内存模型](#121-java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
+    - [主内存与工作内存](#%E4%B8%BB%E5%86%85%E5%AD%98%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AD%98)
+    - [volatile型变量的特殊规则](#volatile%E5%9E%8B%E5%8F%98%E9%87%8F%E7%9A%84%E7%89%B9%E6%AE%8A%E8%A7%84%E5%88%99)
+    - [原子性、可见性和有序性](#%E5%8E%9F%E5%AD%90%E6%80%A7%E5%8F%AF%E8%A7%81%E6%80%A7%E5%92%8C%E6%9C%89%E5%BA%8F%E6%80%A7)
+    - [先行发生原则](#%E5%85%88%E8%A1%8C%E5%8F%91%E7%94%9F%E5%8E%9F%E5%88%99)
+  - [12.2 Java与线程](#122-java%E4%B8%8E%E7%BA%BF%E7%A8%8B)
+    - [线程的实现](#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0)
+    - [Java线程调度](#java%E7%BA%BF%E7%A8%8B%E8%B0%83%E5%BA%A6)
+    - [状态转换](#%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 十二、Java内存模型与线程
 
 ## 12.1 Java内存模型

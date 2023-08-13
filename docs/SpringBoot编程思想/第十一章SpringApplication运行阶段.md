@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [十一、SpringApplication运行阶段](#%E5%8D%81%E4%B8%80springapplication%E8%BF%90%E8%A1%8C%E9%98%B6%E6%AE%B5)
+  - [准备过程](#%E5%87%86%E5%A4%87%E8%BF%87%E7%A8%8B)
+  - [SpringApplicationRunListener](#springapplicationrunlistener)
+    - [自定义SpringApplicationRunListener](#%E8%87%AA%E5%AE%9A%E4%B9%89springapplicationrunlistener)
+    - [Spring Boot事件](#spring-boot%E4%BA%8B%E4%BB%B6)
+  - [Spring应用上下文启动阶段](#spring%E5%BA%94%E7%94%A8%E4%B8%8A%E4%B8%8B%E6%96%87%E5%90%AF%E5%8A%A8%E9%98%B6%E6%AE%B5)
+  - [Spring应用上下文启动后阶段](#spring%E5%BA%94%E7%94%A8%E4%B8%8A%E4%B8%8B%E6%96%87%E5%90%AF%E5%8A%A8%E5%90%8E%E9%98%B6%E6%AE%B5)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 十一、SpringApplication运行阶段
 ## 准备过程
 准备过程的核心对象有：

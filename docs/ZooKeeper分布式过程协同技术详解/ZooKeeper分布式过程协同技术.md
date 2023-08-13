@@ -1,3 +1,35 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [ZooKeeper分布式过程协同技术](#zookeeper%E5%88%86%E5%B8%83%E5%BC%8F%E8%BF%87%E7%A8%8B%E5%8D%8F%E5%90%8C%E6%8A%80%E6%9C%AF)
+  - [2、ZooKeeper技术](#2zookeeper%E6%8A%80%E6%9C%AF)
+    - [ZooKeeper API](#zookeeper-api)
+    - [znode的不同类型](#znode%E7%9A%84%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B)
+    - [ZooKeeper实现锁](#zookeeper%E5%AE%9E%E7%8E%B0%E9%94%81)
+  - [3、开始使用ZooKeeper的API](#3%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8zookeeper%E7%9A%84api)
+    - [注册从节点](#%E6%B3%A8%E5%86%8C%E4%BB%8E%E8%8A%82%E7%82%B9)
+  - [4、处理状态变化](#4%E5%A4%84%E7%90%86%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96)
+    - [单次触发器](#%E5%8D%95%E6%AC%A1%E8%A7%A6%E5%8F%91%E5%99%A8)
+    - [如何设置监视点](#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E7%9B%91%E8%A7%86%E7%82%B9)
+    - [如何解决在同个节点创建多个监视点的问题](#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%9C%A8%E5%90%8C%E4%B8%AA%E8%8A%82%E7%82%B9%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E7%9B%91%E8%A7%86%E7%82%B9%E7%9A%84%E9%97%AE%E9%A2%98)
+    - [ZK使用注意点](#zk%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E7%82%B9)
+  - [5、故障处理](#5%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86)
+    - [可恢复的故障](#%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E6%95%85%E9%9A%9C)
+    - [不可恢复的故障](#%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E6%95%85%E9%9A%9C)
+  - [6、ZooKeeper注意事项](#6zookeeper%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+  - [9、ZooKeeper内部原理](#9zookeeper%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86)
+    - [请求、事物和标识符](#%E8%AF%B7%E6%B1%82%E4%BA%8B%E7%89%A9%E5%92%8C%E6%A0%87%E8%AF%86%E7%AC%A6)
+    - [群首选举](#%E7%BE%A4%E9%A6%96%E9%80%89%E4%B8%BE)
+    - [Zab：状态更新的广播协议](#zab%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E7%9A%84%E5%B9%BF%E6%92%AD%E5%8D%8F%E8%AE%AE)
+    - [观察者](#%E8%A7%82%E5%AF%9F%E8%80%85)
+    - [服务器的构成](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9E%84%E6%88%90)
+    - [服务器和监视点](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E7%9B%91%E8%A7%86%E7%82%B9)
+  - [10、运行ZooKeeper](#10%E8%BF%90%E8%A1%8Czookeeper)
+    - [ZK基本配置](#zk%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE)
+    - [文件系统布局和格式](#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B8%83%E5%B1%80%E5%92%8C%E6%A0%BC%E5%BC%8F)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # ZooKeeper分布式过程协同技术
 
 ## 2、ZooKeeper技术
